@@ -49,7 +49,27 @@ MAIN STYLES
   justify-content: space-between;
   margin-bottom: 8px;
 }
+/*
 
+ContentEditable поля
+
+*/
+
+[contenteditable="true"]:focus {
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 var(--accent-background-color);
+    padding: 2px;
+}
+
+.last-job [contenteditable="true"]:focus {
+    padding: 2px;
+    box-shadow: 0 0 10px 0 #ffffff;
+}
+.education-card-favorite [contenteditable="true"]:focus {
+    padding: 2px;
+    box-shadow: 0 0 10px 0 #ffffff;
+}
 /*
 
 Buttons
