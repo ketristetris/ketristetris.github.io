@@ -1,4 +1,6 @@
+// ./js/save-data.js
 
+// Ключи для localStorage
 const FIELDS = {
     name: 'field_name',
     profession: 'field_profession',
@@ -15,6 +17,7 @@ const FIELDS = {
     schools: 'field_education_schools'
 };
 
+// Функции для работы с localStorage
 function saveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
@@ -24,6 +27,7 @@ function loadFromStorage(key, defaultValue) {
     return saved ? JSON.parse(saved) : defaultValue;
 }
 
+// Основная логика: загрузка и редактирование
 document.addEventListener('DOMContentLoaded', () => {
     const elements = {
         name: document.querySelector('.greetings-name'),
@@ -41,11 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
         schools: document.querySelectorAll('.education-card .school-name')
     };
 
+    // Загружаем сохранённые значения
     elements.name.textContent = loadFromStorage(FIELDS.name, elements.name.textContent);
     elements.profession.textContent = loadFromStorage(FIELDS.profession, elements.profession.textContent);
     elements.email.textContent = loadFromStorage(FIELDS.email, elements.email.textContent);
     elements.contactHeading.textContent = loadFromStorage(FIELDS.contactHeading, elements.contactHeading.textContent);
 
+    // Универсальная функция для списков
     const updateList = (list, savedKey) => {
         const saved = loadFromStorage(savedKey, []);
         list.forEach((el, i) => {
@@ -63,12 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateList(elements.tags, FIELDS.tags);
     updateList(elements.schools, FIELDS.schools);
 
+    // Делаем отдельные элементы редактируемыми
     const makeEditable = (el, key) => {
         el.addEventListener('blur', () => {
             saveToStorage(key, el.textContent);
         });
     };
 
+    // Делаем списки редактируемыми
     const makeListEditable = (list, key) => {
         list.forEach(el => {
             el.addEventListener('blur', () => {
@@ -78,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Применяем ко всем полям
     makeEditable(elements.name, FIELDS.name);
     makeEditable(elements.profession, FIELDS.profession);
     makeEditable(elements.email, FIELDS.email);
