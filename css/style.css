@@ -49,6 +49,51 @@ MAIN STYLES
   justify-content: space-between;
   margin-bottom: 8px;
 }
+
+/*
+
+Buttons
+
+*/
+.navbar{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-button{
+  position: relative;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  border: 0cap;
+  border-radius: 16px;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  background-color: var(--accent-background-color);
+  color: white;
+  box-shadow: 4px 4px 7.7px 0 rgba(0, 0, 0, 0.1);
+  transition: all cubic-bezier(0.22, 0.61, 0.36, 1) 1s;
+}
+
+.nav-button:hover{
+  top:-5px;
+  left: -5px;
+  box-shadow: 9px 9px 10px 0 rgba(0, 0, 0, 0.15);
+  background-color: rgb(98, 224, 156);
+}
+.nav-button:active{
+  top: 0;
+  left: 0;
+  box-shadow: 4px 4px 7.7px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgb(47, 188, 99);
+}
 /* 
 
 MAIN INFO BLOCK 
