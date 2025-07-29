@@ -127,6 +127,7 @@ LANGUAGES BLOCK
   line-height: 1.04;
 }
 .language-knowledge-grade{
+  padding-left: 12px;
   height: 53px;
   display: flex;
   flex-direction: column;
@@ -359,4 +360,67 @@ Interests and contact
 .contact-email{ /*Увеличила отступ между мейлом и заголовком чтобы всё встало как надо*/
   margin-top: 20px;
   color: rgba(221, 221, 221, 1);
+}
+/*
+
+ADAPTIVE LAYOUT
+
+*/
+@media (max-width: 555px){
+  .container{
+    min-width: auto;
+    width: 100%;
+  }
+  .basic-info, .experience-tools, .education-interests{
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .basic-info{
+    justify-content: flex-start;
+  }
+  .job-info{
+    flex-wrap: wrap;
+  }
+  .job-about,
+  .job-points {
+    flex: 0 1 100%; /* Каждый займёт 100% ширины — будет на отдельной строке */
+    width: 100%;
+  }
+  .job-points{
+    margin-top: 10px;
+  }
+  .job{
+    width: 95%;
+  }
+  .languages-block{
+    width: 100%;
+  }
+  .language-knowledge-grade{
+    width: 100%;
+  }
+  .grading{
+    width: 100%;
+  }
+  .hindi{
+    width: 76.7857%;
+  }
+  .tools{
+    width: 100%;
+  }
+  .tools-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .design-tools-block{
+    width: 92px;
+  }
+  .education-block, .education-container, .interest-contact{
+    width: 100%;
+  }
+   .contact-block, .interests-block{
+    width: 94%;
+   }
 }
