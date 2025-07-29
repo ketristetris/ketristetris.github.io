@@ -1,96 +1,362 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --accent-background-color: rgba(40, 217, 121, 1);
+    --block-background-color: rgba(240, 240, 240, 1);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Poppins, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 10px;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* 
+
+MAIN STYLES 
+
+*/
+
+.main-wrap {
+    display: flex;
+    justify-content: center;
 }
 
-body {
-  margin: 0;
+.container {
+    min-width: 555px;
+}
+
+.heading {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.main {
+    width: 100%;
+}
+
+.block {
+    padding: 12px;
+    background-color: var(--block-background-color);
+    border: 0cap;
+    border-radius: 16px;
+}
+
+.top-bar{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+/* 
+
+MAIN INFO BLOCK 
+
+*/
+.basic-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/*
+
+PHOTO 
+
+*/
+.photo-block img {
+    width: 124px;
+    height: 124px;
+
+    border: 0cap;
+    border-radius: 16px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* 
+
+GREETINGS BLOCK
+
+*/
+
+.greetings-block {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.greetings-text{
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.greetings-name{
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.greetings-profession{
+  color: rgba(92, 92, 92, 1);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/*
+
+LANGUAGES BLOCK 
+
+*/
+
+.languages-block {
+    width: 240px;
+    height: 90px;
+    padding-bottom: 22px;
+}
+.language-knowledges {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+.language-knowledge-name{
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 10px;
+  line-height: 1.04;
+}
+.language-knowledge-grade{
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.grading {
+    background-color: var(--accent-background-color);
+    width: 168px;
+    height: 10px;
+    border: 0cap;
+    border-radius: 16px;
+}
+.hindi{
+  width: 129px;
+}
+
+/*
+
+EXPERIENCE AND TOOLS 
+
+*/
+
+.experience-tools{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.experience-block{
+  padding-bottom: 10px;
+}
+.job-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.last-job{
+  background-color: var(--accent-background-color);
+  color: white;
+}
+
+.job{
+  width: 371px;
+  padding: 8px;
+  border: 0cap;
+  border-radius: 10px;
+}
+
+.job-most-recent{
+  border: 0cap;
+  border-radius: 59px;
+  font-size: 8px;
+  text-align: center;
+  padding: 2px 8px;
+  background-color: rgba(126, 115, 18, 0.4);
+  color: rgba(221, 241, 99, 1);
+}
+.job-info{
+  display: flex;
+  justify-content: space-between;
+}
+.about-work{
+  display: flex;
+  font-size: 8px;
+  font-weight: 400;
+}
+.role-name{
+  font-weight: 500;
+}
+.previous-job .about-work{
+  color: rgba(63, 61, 61, 1);
+}
+.last-job .about-work{
+  color: rgba(235, 249, 242, 1);
+}
+.job-points{
+  width: 239px;
+  font-size: 8px;
+}
+.job-points ul{
+  margin: 0;
+  padding-left: 12px;
+}
+.previous-job{
+  background-color: white;
+}
+
+/*
+
+TOOLS
+
+*/
+
+.tools{
+  width: 100px;
+  padding: 12px;
+  padding-bottom: 3px;
+}
+.tools-container{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
+.tools-category{
+  position: relative;
+}
+.tools-heading{
+  position: absolute;
+  top: -4px;
+  background-color: black;
+  font-size: 5px;
+  padding: 2px 6px;
+  color: white;
+  border-radius: 59px;
+  width: fit-content;
+  white-space: nowrap;
+}
+.tools-progs{
+  background-color: white;
+  display: flex;
+  width: 61px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 8px;
+}
+.tools-progs img{ /* В макете кривая вёрстка этой части, я подровняла чутка.*/
+  width: 20px;
+  height: 20px;
+}
+.design .tools-heading{
+    left: 30%;
+}
+.ai .tools-heading{
+  left: 10%;
+}
+.no-code .tools-heading{
+  left: 28%;
+}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/*
+ 
+EDUCATION AND INTERESTS
+ 
+*/
+.education-block{
+  padding-right: 8px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.education-interests{
+  display: flex;
+  gap: 20px;
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.education-container{
+  width: 248px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
-
-.card {
-  padding: 2em;
+.education-card{
+  padding: 8px;
+  border:0cap;
+  border-radius: 16px;
+  background-color: white;
 }
-
-.read-the-docs {
-  color: #888;
+.education-card-favorite{
+  background-color: var(--accent-background-color);
+  color: white;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+.year{
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.major{
+  font-weight: 500;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.education-card-favorite .tags{
+  color: rgba(235, 249, 242, 1);
+}
+.tags{
+  width: 100px;
+  font-size: 8px;
+  color: rgba(20, 144, 99, 1);
+}
+.school-name{
+  margin-top: 8px;
+  font-size: 8px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/*
+
+Interests and contact
+
+*/
+.interests-block{
+  width: 243px;
+}
+.interests-container{
+  width: 243px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.interest{
+  background-color: white;
+  border: 0cap;
+  border-radius: 59px;
+  padding: 4px 10px;
+}
+.contact-block{
+  width: 243px;
+  padding: 12px;
+  background-color: black;
+  color: white;
+}
+.interest-contact{
+  width: 267px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-heading{
+  font-size: 14px;
+  font-weight: 500;
+}
+.contact-email{ /*Увеличила отступ между мейлом и заголовком чтобы всё встало как надо*/
+  margin-top: 20px;
+  color: rgba(221, 221, 221, 1);
 }
