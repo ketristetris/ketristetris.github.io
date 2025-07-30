@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('download');
-  const element = document.querySelector('.main'); // ← у тебя нет id="main", только class="main"
+  const element = document.querySelector('.main');
 
   if (!button || !element) {
     console.error('Не найдены элементы для генерации PDF');
