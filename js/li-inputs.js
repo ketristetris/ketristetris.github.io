@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // обработчик input к li 
+    // обработчик input к li
     function addInputListenersToLi(ul) {
         ul.querySelectorAll("li").forEach((li) => {
             li.addEventListener("input", handleInput);

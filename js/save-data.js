@@ -1,21 +1,20 @@
 /* jshint esversion: 6 */
 
-
 // Ключи для localStorage
 const FIELDS = {
-    name: 'field_name',
-    profession: 'field_profession',
-    email: 'field_email',
-    contactHeading: 'field_contact_heading',
-    interests: 'field_interests',
-    experienceDates: 'field_experience_dates',
-    roleNames: 'field_role_names',
-    aboutWork: 'field_about_work',
-    jobPoints: 'field_job_points',
-    educationYears: 'field_education_years',
-    majors: 'field_education_majors',
-    tags: 'field_education_tags',
-    schools: 'field_education_schools'
+    name: "field_name",
+    profession: "field_profession",
+    email: "field_email",
+    contactHeading: "field_contact_heading",
+    interests: "field_interests",
+    experienceDates: "field_experience_dates",
+    roleNames: "field_role_names",
+    aboutWork: "field_about_work",
+    jobPoints: "field_job_points",
+    educationYears: "field_education_years",
+    majors: "field_education_majors",
+    tags: "field_education_tags",
+    schools: "field_education_schools",
 };
 
 // Функции для работы с localStorage
@@ -29,28 +28,40 @@ function loadFromStorage(key, defaultValue) {
 }
 
 // Основная логика: загрузка и редактирование
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     const elements = {
-        name: document.querySelector('.greetings-name'),
-        profession: document.querySelector('.greetings-profession'),
-        email: document.querySelector('.contact-email'),
-        contactHeading: document.querySelector('.contact-heading'),
-        interests: document.querySelectorAll('.interest'),
-        experienceDates: document.querySelectorAll('.job-date'),
-        roleNames: document.querySelectorAll('.role-name'),
-        aboutWork: document.querySelectorAll('.about-work'),
-        jobPoints: document.querySelectorAll('.job-points li'),
-        educationYears: document.querySelectorAll('.education-card .year'),
-        majors: document.querySelectorAll('.education-card .major'),
-        tags: document.querySelectorAll('.education-card .tags'),
-        schools: document.querySelectorAll('.education-card .school-name')
+        name: document.querySelector(".greetings-name"),
+        profession: document.querySelector(".greetings-profession"),
+        email: document.querySelector(".contact-email"),
+        contactHeading: document.querySelector(".contact-heading"),
+        interests: document.querySelectorAll(".interest"),
+        experienceDates: document.querySelectorAll(".job-date"),
+        roleNames: document.querySelectorAll(".role-name"),
+        aboutWork: document.querySelectorAll(".about-work"),
+        jobPoints: document.querySelectorAll(".job-points li"),
+        educationYears: document.querySelectorAll(".education-card .year"),
+        majors: document.querySelectorAll(".education-card .major"),
+        tags: document.querySelectorAll(".education-card .tags"),
+        schools: document.querySelectorAll(".education-card .school-name"),
     };
 
     // Загружаем сохранённые значения
-    elements.name.textContent = loadFromStorage(FIELDS.name, elements.name.textContent);
-    elements.profession.textContent = loadFromStorage(FIELDS.profession, elements.profession.textContent);
-    elements.email.textContent = loadFromStorage(FIELDS.email, elements.email.textContent);
-    elements.contactHeading.textContent = loadFromStorage(FIELDS.contactHeading, elements.contactHeading.textContent);
+    elements.name.textContent = loadFromStorage(
+        FIELDS.name,
+        elements.name.textContent
+    );
+    elements.profession.textContent = loadFromStorage(
+        FIELDS.profession,
+        elements.profession.textContent
+    );
+    elements.email.textContent = loadFromStorage(
+        FIELDS.email,
+        elements.email.textContent
+    );
+    elements.contactHeading.textContent = loadFromStorage(
+        FIELDS.contactHeading,
+        elements.contactHeading.textContent
+    );
 
     // Универсальная функция для списков
     const updateList = (list, savedKey) => {
@@ -72,16 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Делаем отдельные элементы редактируемыми
     const makeEditable = (el, key) => {
-        el.addEventListener('blur', () => {
+        el.addEventListener("blur", () => {
             saveToStorage(key, el.textContent);
         });
     };
 
     // Делаем списки редактируемыми
     const makeListEditable = (list, key) => {
-        list.forEach(el => {
-            el.addEventListener('blur', () => {
-                const values = Array.from(list).map(item => item.textContent);
+        list.forEach((el) => {
+            el.addEventListener("blur", () => {
+                const values = Array.from(list).map((item) => item.textContent);
                 saveToStorage(key, values);
             });
         });

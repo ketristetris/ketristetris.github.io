@@ -20,74 +20,71 @@ Animations
 
 /* for text outline*/
 @keyframes opacity-easeOutElastic-accent {
-	0% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0);
-	}
+    0% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0);
+    }
 
-	16% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
-	}
+    16% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
+    }
 
-	28% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0.68);
-	}
+    28% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0.68);
+    }
 
-	44% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
-	}
+    44% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
+    }
 
-	59% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0.88);
-	}
+    59% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0.88);
+    }
 
-	73% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
-	}
+    73% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
+    }
 
-	88% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0.95);
-	}
+    88% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 0.95);
+    }
 
-	100% {
-    box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
-	}
-
+    100% {
+        box-shadow: 0 0 10px 0 rgba(40, 217, 121, 1);
+    }
 }
 
-
 @keyframes opacity-easeOutElastic-white {
-	0% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0);
-	}
+    0% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0);
+    }
 
-	16% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
-	}
+    16% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
+    }
 
-	28% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.68);
-	}
+    28% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.68);
+    }
 
-	44% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
-	}
+    44% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
+    }
 
-	59% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.88);
-	}
+    59% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.88);
+    }
 
-	73% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
-	}
+    73% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
+    }
 
-	88% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.95);
-	}
+    88% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.95);
+    }
 
-	100% {
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
-	}
-
+    100% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
+    }
 }
 /* 
 
@@ -183,7 +180,7 @@ Buttons
 }
 
 .nav-button::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
