@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 // Добовляем шаблон если человек зайдёт с телефона
 function createPdfTemplate() {
   const main = document.querySelector('.main');

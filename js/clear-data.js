@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 const FIELDS = {
     name: 'field_name',
     profession: 'field_profession',

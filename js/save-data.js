@@ -1,4 +1,5 @@
-// ./js/save-data.js
+/* jshint esversion: 6 */
+
 
 // Ключи для localStorage
 const FIELDS = {
